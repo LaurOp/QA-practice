@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All tests" preserve-order="true">
+
+    <listeners>
+        <listener class-name="Listener"/>
+    </listeners>
+    <test name="Tests">
+        <classes>
+            <class name="Ex1"/>
+            <class name="Ex2"/>
+            <class name="Ex3"/>
+            <class name="Ex4"/>
+            <class name="Ex5.flow8"/>
+            <class name="Ex5.flow10"/>
+            <class name="Ex5.flow13"/>
+            <class name="Ex5.flow15"/>
+            <class name="Ex5.flow19"/>
+        </classes>
+    </test>
+
+
+</suite>
