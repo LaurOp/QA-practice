@@ -54,7 +54,7 @@ public class Ex1 {
         WebElement spanNrOfTVs = driver.findElement(By.xpath("//span[@class='title-phrasing title-phrasing-sm']"));
         String textTVs = spanNrOfTVs.getText();
         // split dupa un regex; obtinem primul cuv din prop (ignora caracterele spatiu)
-        textTVs = textTVs.split("[ ]+")[0];
+        textTVs = textTVs.split("[0-9]+")[0];     // regex sterg litere si spatii
         // parse textului la Int
         System.out.println(Integer.parseInt(textTVs));
 
@@ -136,6 +136,7 @@ public class Ex1 {
         System.out.println("\n\n" + "List of TVs under 1200 lei:\n");
         JsonArray TVs = null;
         // read from json file
+
         try (Reader reader = new InputStreamReader(new FileInputStream("TVs.json"), "UTF-8")) {
             TVs = (JsonArray) JsonParser.parseReader( reader );
         } catch (Exception e) {
